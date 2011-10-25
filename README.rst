@@ -7,5 +7,6 @@ Overview
 
 cord provides the following packages:
 
+* ext: Utilities for compiling Boost.Python extension modules.
 * ndarray: A C++ class which serves as a thin wrapper to the numpy.ndarray
   class.
