@@ -32,7 +32,7 @@ darray new_array(int s0, int s1) {
   return out;
 }
 
-BOOST_PYTHON_MODULE(test) {
+BOOST_PYTHON_MODULE(test_ndarray) {
   import_array(); // necessary?
 
   namespace bp = boost::python;
