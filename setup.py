@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 from cord.ext import CordExtension
 
 ndarray_ext = CordExtension('cord.ndarray',

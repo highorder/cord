@@ -2,7 +2,7 @@
 Utilities for compiling Boost.Python and NumPy extension modules.
 """
 
-from distutils.core import Extension
+from setuptools import Extension
 
 def add_numpy(kwargs):
     """
@@ -10,13 +10,8 @@ def add_numpy(kwargs):
     to be used in creating a new Extension.
     """
 
-    # Find NumPy include directory, without actually importing it.
-    from imp import find_module
-    from os import path
-    np = path.join(find_module('numpy')[1], 'core', 'include')
-
-    # Add to the list of include_dirs
-    kwargs.setdefault('include_dirs', []).append(np)
+    from numpy import get_include
+    kwargs.setdefault('include_dirs', []).append(get_include())
 
 def add_boost_python(kwargs):
     """
